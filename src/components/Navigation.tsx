@@ -41,7 +41,7 @@ export default function Navigation() {
         backgroundColor: isScrolled
           ? "rgba(66, 11, 32, 0.95)"
           : "rgba(66, 11, 32, 0.90)",
-        borderBottomColor: "#D4AF37",
+        borderBottomColor: "#C4A447",
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className="transition-colors font-medium hover:opacity-80"
-                style={{ color: "#D4AF37" }}
+                style={{ color: "#C4A447" }}
               >
                 {item.label}
               </Link>
@@ -93,19 +93,19 @@ export default function Navigation() {
                 className={`w-6 h-0.5 transition-all duration-300 ${
                   isMenuOpen ? "rotate-45 translate-y-2" : ""
                 }`}
-                style={{ backgroundColor: "#D4AF37" }}
+                style={{ backgroundColor: "#C4A447" }}
               ></div>
               <div
                 className={`w-6 h-0.5 transition-all duration-300 ${
                   isMenuOpen ? "opacity-0" : ""
                 }`}
-                style={{ backgroundColor: "#D4AF37" }}
+                style={{ backgroundColor: "#C4A447" }}
               ></div>
               <div
                 className={`w-6 h-0.5 transition-all duration-300 ${
                   isMenuOpen ? "-rotate-45 -translate-y-2" : ""
                 }`}
-                style={{ backgroundColor: "#D4AF37" }}
+                style={{ backgroundColor: "#C4A447" }}
               ></div>
             </div>
           </button>
@@ -124,7 +124,7 @@ export default function Navigation() {
                 href={item.href}
                 onClick={closeMenu}
                 className="block px-4 py-2 rounded-lg transition-colors hover:opacity-80"
-                style={{ color: "#D4AF37" }}
+                style={{ color: "#C4A447" }}
               >
                 {item.label}
               </Link>

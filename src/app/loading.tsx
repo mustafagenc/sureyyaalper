@@ -11,7 +11,7 @@ export default function Loading() {
             className="w-20 h-20 border-4 rounded-full animate-spin mx-auto mb-4"
             style={{ 
               borderColor: 'rgba(212, 175, 55, 0.3)',
-              borderTopColor: '#D4AF37'
+              borderTopColor: '#C4A447'
             }}
           ></div>
           
@@ -19,7 +19,7 @@ export default function Loading() {
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -mt-4">
             <div 
               className="w-3 h-3 rounded-full animate-pulse"
-              style={{ backgroundColor: '#D4AF37' }}
+              style={{ backgroundColor: '#C4A447' }}
             ></div>
           </div>
         </div>

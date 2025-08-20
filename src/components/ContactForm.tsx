@@ -56,10 +56,10 @@ export default function ContactForm() {
           className="mb-6 p-4 border rounded-lg"
           style={{
             backgroundColor: "rgba(34, 197, 94, 0.1)",
-            borderColor: "#D4AF37",
+            borderColor: "#C4A447",
           }}
         >
-          <p style={{ color: "#D4AF37" }}>
+          <p style={{ color: "#C4A447" }}>
             Mesajınız başarıyla gönderildi! En kısa sürede size dönüş yapılacaktır.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function ContactForm() {
           <label
             htmlFor="name"
             className="block text-sm font-medium mb-2"
-            style={{ color: "#D4AF37" }}
+            style={{ color: "#C4A447" }}
           >
             Adınız Soyadınız *
           </label>
@@ -101,7 +101,7 @@ export default function ContactForm() {
                 backgroundColor: "rgba(96, 14, 46, 0.9)",
                 borderColor: "rgba(212, 175, 55, 0.5)",
                 borderWidth: "1px",
-                "--tw-ring-color": "#D4AF37",
+                "--tw-ring-color": "#C4A447",
               } as React.CSSProperties
             }
             placeholder="Adınız ve soyadınız"
@@ -113,7 +113,7 @@ export default function ContactForm() {
           <label
             htmlFor="email"
             className="block text-sm font-medium mb-2"
-            style={{ color: "#D4AF37" }}
+            style={{ color: "#C4A447" }}
           >
             E-posta Adresiniz *
           </label>
@@ -130,7 +130,7 @@ export default function ContactForm() {
                 backgroundColor: "rgba(96, 14, 46, 0.9)",
                 borderColor: "rgba(212, 175, 55, 0.5)",
                 borderWidth: "1px",
-                "--tw-ring-color": "#D4AF37",
+                "--tw-ring-color": "#C4A447",
               } as React.CSSProperties
             }
             placeholder="ornek@email.com"
@@ -142,7 +142,7 @@ export default function ContactForm() {
           <label
             htmlFor="message"
             className="block text-sm font-medium mb-2"
-            style={{ color: "#D4AF37" }}
+            style={{ color: "#C4A447" }}
           >
             Mesajınız *
           </label>
@@ -159,7 +159,7 @@ export default function ContactForm() {
                 backgroundColor: "rgba(96, 14, 46, 0.9)",
                 borderColor: "rgba(212, 175, 55, 0.5)",
                 borderWidth: "1px",
-                "--tw-ring-color": "#D4AF37",
+                "--tw-ring-color": "#C4A447",
               } as React.CSSProperties
             }
             placeholder="Mesajınızı buraya yazın..."
@@ -173,7 +173,7 @@ export default function ContactForm() {
           className="w-full text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed"
           style={{
             background: "linear-gradient(135deg, #420B20, #600E2E)",
-            borderColor: "#D4AF37",
+            borderColor: "#C4A447",
           }}
           onMouseEnter={(e) => {
             if (!isSubmitting) {

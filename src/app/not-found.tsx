@@ -17,13 +17,13 @@ export default function NotFound() {
             width={120}
             height={120}
             className="mx-auto rounded-full shadow-lg border-4"
-            style={{ borderColor: '#D4AF37' }}
+            style={{ borderColor: '#C4A447' }}
           />
         </div>
 
         <h1 
           className="text-6xl font-bold mb-4"
-          style={{ color: '#D4AF37' }}
+          style={{ color: '#C4A447' }}
         >
           404
         </h1>
@@ -73,7 +73,7 @@ export default function NotFound() {
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-sm" style={{ color: '#D4AF37' }}>
+          <p className="text-sm" style={{ color: '#C4A447' }}>
             &quot;Sanat, hayatın güzelliklerini keşfetme yolculuğudur.&quot;
           </p>
           <p className="text-xs mt-1" style={{ color: '#E6D7C3' }}>- Süreyya Alper</p>

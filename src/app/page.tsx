@@ -35,7 +35,7 @@ export default function Home() {
                 className="text-transparent bg-clip-text"
                 style={{
                   backgroundImage:
-                    "linear-gradient(45deg, #D4AF37, #F5DEB3, #CD853F)",
+                    "linear-gradient(45deg, #C4A447, #E8D5A8, #B8956F)",
                 }}
               >
                 Süreyya Alper
@@ -43,7 +43,7 @@ export default function Home() {
             </h1>
             <p
               className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto"
-              style={{ color: "#F5DEB3" }}
+              style={{ color: "#E8D5A8" }}
             >
               Geleneksel Türk Sanatları Ustası • Müzehhibe
             </p>
@@ -69,8 +69,8 @@ export default function Home() {
                 href="#iletisim"
                 className="inline-flex items-center px-8 py-3 border-2 text-base font-medium rounded-lg transition-all duration-300 hover:opacity-80"
                 style={{
-                  borderColor: "#D4AF37",
-                  color: "#D4AF37",
+                  borderColor: "#C4A447",
+                  color: "#C4A447",
                   backgroundColor: "rgba(66, 11, 32, 0.3)",
                 }}
               >
@@ -94,13 +94,13 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"
-              style={{ color: "#F5DEB3" }}
+              style={{ color: "#E8D5A8" }}
             >
               Hakkında
             </h2>
             <div
               className="w-24 h-1 mx-auto"
-              style={{ background: "linear-gradient(90deg, #D4AF37, #F5DEB3)" }}
+              style={{ background: "linear-gradient(90deg, #C4A447, #E8D5A8)" }}
             ></div>
           </div>
 
@@ -129,7 +129,7 @@ export default function Home() {
               <div className="mt-8">
                 <h3
                   className="text-xl font-bold mb-4"
-                  style={{ color: "#D4AF37" }}
+                  style={{ color: "#C4A447" }}
                 >
                   Sosyal Medya
                 </h3>
@@ -137,11 +137,11 @@ export default function Home() {
                   <a
                     href="https://www.facebook.com/sureyya.alper"
                     className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
-                    style={{ backgroundColor: "rgba(212, 175, 55, 0.2)" }}
+                    style={{ backgroundColor: "rgba(196, 164, 71, 0.2)" }}
                   >
                     <svg
                       className="w-6 h-6"
-                      style={{ color: "#D4AF37" }}
+                      style={{ color: "#C4A447" }}
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -151,11 +151,11 @@ export default function Home() {
                   <a
                     href="https://www.instagram.com/sureyyaalper"
                     className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
-                    style={{ backgroundColor: "rgba(212, 175, 55, 0.2)" }}
+                    style={{ backgroundColor: "rgba(196, 164, 71, 0.2)" }}
                   >
                     <svg
                       className="w-6 h-6"
-                      style={{ color: "#D4AF37" }}
+                      style={{ color: "#C4A447" }}
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -193,7 +193,7 @@ export default function Home() {
             </h2>
             <div
               className="w-24 h-1 mx-auto"
-              style={{ background: "linear-gradient(90deg, #D4AF37, #F5DEB3)" }}
+              style={{ background: "linear-gradient(90deg, #C4A447, #F5DEB3)" }}
             ></div>
             <p
               className="mt-6 text-lg max-w-3xl mx-auto"
@@ -227,7 +227,7 @@ export default function Home() {
             </h2>
             <div
               className="w-24 h-1 mx-auto"
-              style={{ background: "linear-gradient(90deg, #D4AF37, #F5DEB3)" }}
+              style={{ background: "linear-gradient(90deg, #C4A447, #F5DEB3)" }}
             ></div>
           </div>
 
@@ -253,11 +253,23 @@ export default function Home() {
                 Süreyya Alper
               </span>
             </div>
-            <p className="mb-6" style={{ color: "#D4AF37" }}>
+            <p className="mb-6" style={{ color: "#C4A447" }}>
               Geleneksel Türk Sanatları • Müzehhiplik
             </p>
             <p className="text-sm" style={{ color: "#E6D7C3" }}>
               © 2024 Süreyya Alper. Tüm hakları saklıdır.
+            </p>
+            <p className="text-xs mt-2" style={{ color: "#C4A447" }}>
+              geliştiren:{" "}
+              <a
+                href="https://mustafagenc.info"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline transition-all duration-300"
+                style={{ color: "#F5DEB3" }}
+              >
+                mustafa genç
+              </a>
             </p>
           </div>
         </div>

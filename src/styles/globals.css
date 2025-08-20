@@ -32,7 +32,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: #C4A447;
   border-radius: 4px;
 }
 
@@ -79,7 +79,7 @@ body {
 
 /* Custom focus states */
 input:focus, textarea:focus, button:focus {
-  outline: 2px solid #D4AF37;
+  outline: 2px solid #C4A447;
   outline-offset: 2px;
 }
 
