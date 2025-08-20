@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Gallery from "@/components/Gallery";
-import ContactForm from "@/components/ContactForm";
-import Navigation from "@/components/Navigation";
+import Gallery from "@/components/gallery";
+import ContactForm from "@/components/contact-form";
+import Navigation from "@/components/navigation";
 
 export default function Home() {
   return (
@@ -40,7 +40,7 @@ export default function Home() {
                 alt="Süreyya Alper"
                 width={270}
                 height={270}
-                className="mx-auto rounded-full shadow-2xl border-3"
+                className="mx-auto rounded-full shadow-2xl border-3 w-[200px] h-[200px] sm:w-[270px] sm:h-[270px]"
                 style={{ borderColor: "#AB7B66" }}
               />
             </div>
@@ -334,7 +334,13 @@ export default function Home() {
                 height={50}
                 className="rounded-full mr-3"
               />
-              <span className="text-2xl font-bold" style={{ color: "#F5DEB3" }}>
+              <span
+                className="text-transparent bg-clip-text text-3xl font-bold"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(45deg, #C4A447, #E8D5A8, #B8956F)",
+                }}
+              >
                 Süreyya Alper
               </span>
             </div>

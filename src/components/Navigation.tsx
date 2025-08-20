@@ -61,8 +61,11 @@ export default function Navigation() {
               style={{ borderColor: "#AB7B66" }}
             />
             <span
-              className="ml-3 text-xl font-bold"
-              style={{ color: "#F5DEB3" }}
+              className="text-transparent bg-clip-text ml-3 text-2xl font-bold"
+              style={{
+                backgroundImage:
+                  "linear-gradient(45deg, #C4A447, #E8D5A8, #B8956F)",
+              }}
             >
               Süreyya Alper
             </span>
