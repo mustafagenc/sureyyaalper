@@ -1,105 +1,112 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #420B20;
-  --foreground: #F5DEB3;
+    --background: #420b20;
+    --foreground: #f5deb3;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #600E2E;
+    background: #600e2e;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C4A447;
-  border-radius: 4px;
+    background: #c4a447;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F5DEB3;
+    background: #f5deb3;
 }
 
 /* Smooth transitions for all elements */
 * {
-  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 /* Custom animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 0.6s ease-out forwards;
 }
 
 /* Aspect ratio utilities for older browsers */
 .aspect-w-4 {
-  position: relative;
-  padding-bottom: calc(5 / 4 * 100%);
+    position: relative;
+    padding-bottom: calc(5 / 4 * 100%);
 }
 
 .aspect-h-5 > * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 /* Custom focus states */
-input:focus, textarea:focus, button:focus {
-  outline: 2px solid #C4A447;
-  outline-offset: 2px;
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #c4a447;
+    outline-offset: 2px;
 }
 
 /* Loading animation for images */
 img {
-  background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
-  background-size: 400% 100%;
-  animation: loading 1.4s ease infinite;
+    background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: loading 1.4s ease infinite;
 }
 
 @keyframes loading {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: -100% 50%;
-  }
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: -100% 50%;
+    }
 }
 
 img[src] {
-  animation: none;
-  background: none;
+    animation: none;
+    background: none;
 }
