@@ -6,7 +6,9 @@ export default function Home() {
       <div>
         <Image src="/logo.png" alt="alt" width={300} height={300} />
       </div>
-      <div className="text-5xl font-extrabold text-shadow-2xs text-amber-200">Süreyya Alper</div>
+      <div className="text-7xl font-extrabold bg-gradient-to-tr from-amber-200 to-amber-400 text-transparent bg-clip-text">
+        Süreyya Alper
+      </div>
     </div>
   );
 }
