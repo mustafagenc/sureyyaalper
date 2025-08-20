@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Gallery from '@/components/gallery';
-import ContactForm from '@/components/contact-form';
-import Navigation from '@/components/navigation';
+import Gallery from '@/components/Gallery';
+import ContactForm from '@/components/ContactForm';
+import Navigation from '@/components/Navigation';
 
 export default function Home() {
     return (

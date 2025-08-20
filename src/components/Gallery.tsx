@@ -30,30 +30,30 @@ const galleryItems: GalleryItem[] = [
         id: 3,
         src: '/eserler/sureyya-alper-3.jpg',
         alt: 'Süreyya Alper Eseri 3',
-        title: 'Modern Yorum',
-        description: 'Çağdaş yaklaşımla klasik müzehhiplik',
+        title: 'Modern Yorumlu Tezhip',
+        description: 'Çağdaş tasarım unsurlarıyla harmanlanan geleneksel sanat',
     },
     {
         id: 4,
         src: '/eserler/sureyya-alper-4.jpg',
         alt: 'Süreyya Alper Eseri 4',
-        title: 'Rumi Motifler',
-        description: 'Geleneksel rumi desenlerle süsleme',
+        title: 'Renkli Müzehhiplik',
+        description: 'Canlı renklerle hayat bulan müzehhiplik çalışması',
     },
     {
         id: 5,
         src: '/eserler/sureyya-alper-5.jpg',
         alt: 'Süreyya Alper Eseri 5',
-        title: 'Çini Desenli Tezhip',
-        description: 'Çini sanatından ilhamlı müzehhiplik çalışması',
+        title: 'İncelik ve Zarafet',
+        description: 'Detay odaklı işçilikle ortaya çıkan sanat eseri',
     },
 ];
 
 export default function Gallery() {
-    const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+    const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-    const openModal = (item: GalleryItem) => {
-        setSelectedImage(item);
+    const openModal = (index: number) => {
+        setSelectedImage(index);
     };
 
     const closeModal = () => {
@@ -61,61 +61,64 @@ export default function Gallery() {
     };
 
     const nextImage = () => {
-        if (!selectedImage) return;
-        const currentIndex = galleryItems.findIndex((item) => item.id === selectedImage.id);
-        const nextIndex = (currentIndex + 1) % galleryItems.length;
-        setSelectedImage(galleryItems[nextIndex]);
+        if (selectedImage !== null) {
+            setSelectedImage((selectedImage + 1) % galleryItems.length);
+        }
     };
 
     const prevImage = () => {
-        if (!selectedImage) return;
-        const currentIndex = galleryItems.findIndex((item) => item.id === selectedImage.id);
-        const prevIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-        setSelectedImage(galleryItems[prevIndex]);
+        if (selectedImage !== null) {
+            setSelectedImage(selectedImage === 0 ? galleryItems.length - 1 : selectedImage - 1);
+        }
     };
 
     return (
         <>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-                {galleryItems.map((item) => (
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {galleryItems.map((item, index) => (
                     <div
                         key={item.id}
-                        className="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg transition-all duration-500 hover:shadow-2xl"
-                        onClick={() => openModal(item)}
+                        className="group cursor-pointer overflow-hidden rounded-2xl bg-black/20 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                        onClick={() => openModal(index)}
                     >
-                        <div className="aspect-w-4 aspect-h-5 bg-gradient-to-br from-amber-100 to-orange-100">
+                        <div className="aspect-square overflow-hidden">
                             <Image
                                 src={item.src}
                                 alt={item.alt}
                                 width={400}
-                                height={500}
-                                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                                loading="lazy"
+                                height={400}
+                                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                             />
                         </div>
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                            <div className="absolute right-4 bottom-4 left-4">
-                                <h3 className="mb-1 text-lg font-semibold text-white">
-                                    {item.title}
-                                </h3>
-                                <p className="text-sm text-white/80">{item.description}</p>
-                            </div>
+                        <div className="p-6">
+                            <h3
+                                className="mb-2 text-xl font-semibold"
+                                style={{ color: '#C4A447' }}
+                            >
+                                {item.title}
+                            </h3>
+                            <p className="text-sm leading-relaxed" style={{ color: '#E6D7C3' }}>
+                                {item.description}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
 
             {/* Modal */}
-            {selectedImage && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
+            {selectedImage !== null && (
+                <div
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+                    onClick={closeModal}
+                >
                     <div className="relative max-h-full max-w-4xl">
                         {/* Close button */}
                         <button
                             onClick={closeModal}
-                            className="absolute top-4 right-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 transition-colors hover:bg-white/30"
+                            className="absolute -top-12 right-0 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-white transition-colors hover:bg-white/30"
                         >
                             <svg
-                                className="h-6 w-6 text-white"
+                                className="h-6 w-6"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -170,21 +173,21 @@ export default function Gallery() {
                         </button>
 
                         {/* Image */}
-                        <div className="relative">
+                        <div className="relative" onClick={(e) => e.stopPropagation()}>
                             <Image
-                                src={selectedImage.src}
-                                alt={selectedImage.alt}
+                                src={galleryItems[selectedImage].src}
+                                alt={galleryItems[selectedImage].alt}
                                 width={800}
-                                height={1000}
-                                className="max-h-[80vh] rounded-lg object-contain"
+                                height={600}
+                                className="max-h-[80vh] w-full rounded-lg object-contain"
                             />
-
-                            {/* Image info */}
-                            <div className="absolute right-0 bottom-0 left-0 rounded-b-lg bg-gradient-to-t from-black/80 to-transparent p-6">
-                                <h3 className="mb-2 text-xl font-bold text-white">
-                                    {selectedImage.title}
+                            <div className="mt-4 text-center">
+                                <h3 className="mb-2 text-xl font-semibold text-white">
+                                    {galleryItems[selectedImage].title}
                                 </h3>
-                                <p className="text-white/90">{selectedImage.description}</p>
+                                <p className="text-sm text-gray-300">
+                                    {galleryItems[selectedImage].description}
+                                </p>
                             </div>
                         </div>
                     </div>
