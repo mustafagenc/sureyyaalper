@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Süreyya Alper - Geleneksel Türk Sanatları Ustası | Müzehhiplik",
-  description: "Geleneksel müzehhiplik sanatını modern yorumlarla harmanlayan usta sanatçı Süreyya Alper'in eserlerini, biyografisini ve çalışmalarını keşfedin. Hat sanatı ve tezhip konularında uzman.",
-  keywords: ["müzehhiplik", "tezhip", "hat sanatı", "geleneksel türk sanatları", "altın varak", "İslami sanat", "el yazması", "süsleme sanatı"],
+  title: "Süreyya Alper - Geleneksel Türk Sanatları Ustası | Müzehhibe",
+  description: "Geleneksel müzehhiplik sanatını modern yorumlarla harmanlayan usta sanatçı Süreyya Alper'in eserlerini, biyografisini ve çalışmalarını keşfedin. Tezhip konularında uzman müzehhibe.",
+  keywords: ["müzehhibe", "müzehhiplik", "tezhip", "geleneksel türk sanatları", "altın varak", "İslami sanat", "el yazması", "süsleme sanatı", "kadın sanatçı"],
   authors: [{ name: "Süreyya Alper" }],
   creator: "Süreyya Alper",
   publisher: "Süreyya Alper",
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Süreyya Alper - Müzehhiplik Sanatçısı"
+        alt: "Süreyya Alper - Müzehhibe"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Süreyya Alper - Müzehhiplik Sanatçısı",
+    title: "Süreyya Alper - Müzehhibe",
     description: "Geleneksel müzehhiplik sanatını çağdaş yorumlarla harmanlayan usta sanatçı",
     images: ["/logo.png"]
   },

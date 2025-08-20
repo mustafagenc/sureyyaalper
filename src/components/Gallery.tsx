@@ -17,21 +17,21 @@ const galleryItems: GalleryItem[] = [
     src: '/eserler/sureyya-alper-1.jpg',
     alt: 'Süreyya Alper Eseri 1',
     title: 'Klasik Tezhip Çalışması',
-    description: 'Geleneksel motiflerle süslenmiş el yazması'
+    description: 'Geleneksel motiflerle süslenmiş müzehhiplik eseri'
   },
   {
     id: 2,
     src: '/eserler/sureyya-alper-2.jpg',
     alt: 'Süreyya Alper Eseri 2',
     title: 'Altın Varak Sanatı',
-    description: 'Altın varak ile zenginleştirilmiş tezhip'
+    description: 'Altın varak ile zenginleştirilmiş tezhip çalışması'
   },
   {
     id: 3,
     src: '/eserler/sureyya-alper-3.jpg',
     alt: 'Süreyya Alper Eseri 3',
     title: 'Modern Yorum',
-    description: 'Çağdaş yaklaşımla klasik tezhip'
+    description: 'Çağdaş yaklaşımla klasik müzehhiplik'
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const galleryItems: GalleryItem[] = [
     src: '/eserler/sureyya-alper-5.jpg',
     alt: 'Süreyya Alper Eseri 5',
     title: 'Çini Desenli Tezhip',
-    description: 'Çini sanatından ilhamlı tezhip çalışması'
+    description: 'Çini sanatından ilhamlı müzehhiplik çalışması'
   }
 ];
 

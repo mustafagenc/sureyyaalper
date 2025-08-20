@@ -29,7 +29,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-amber-800 mb-8 max-w-3xl mx-auto">
-              Geleneksel Türk Sanatları Ustası • Müzehhip • Hat Sanatçısı
+              Geleneksel Türk Sanatları Ustası • Müzehhibe
             </p>
             <p className="text-lg text-amber-700 mb-10 max-w-4xl mx-auto leading-relaxed">
               Asırlardır süregelen müzehhiplik sanatını modern dokuşlarla harmanlayarak, 
@@ -73,25 +73,17 @@ export default function Home() {
                 da harmanlayarak benzersiz eserler ortaya çıkarıyorum. Her proje, 
                 müzehhiplik sanatının incelikli dünyasına açılan bir kapıdır.
               </p>
-              <div className="grid grid-cols-2 gap-6 pt-6">
-                <div className="text-center p-4 bg-amber-50 rounded-lg">
-                  <div className="text-2xl font-bold text-amber-600 mb-2">15+</div>
-                  <div className="text-sm text-amber-800">Yıllık Deneyim</div>
-                </div>
-                <div className="text-center p-4 bg-amber-50 rounded-lg">
-                  <div className="text-2xl font-bold text-amber-600 mb-2">100+</div>
-                  <div className="text-sm text-amber-800">Tamamlanan Eser</div>
-                </div>
-              </div>
             </div>
             
             <div className="relative">
-              <div className="aspect-w-4 aspect-h-5 bg-gradient-to-br from-amber-100 to-orange-100 rounded-2xl shadow-2xl overflow-hidden">
-                <div className="flex items-center justify-center text-amber-600">
-                  <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                  </svg>
-                </div>
+              <div className="aspect-w-3 aspect-h-4 rounded-2xl shadow-2xl overflow-hidden max-w-md mx-auto">
+                <Image
+                  src="/sureyya-alper.jpg"
+                  alt="Süreyya Alper - Müzehhibe"
+                  width={400}
+                  height={500}
+                  className="object-cover rounded-2xl w-full h-full"
+                />
               </div>
             </div>
           </div>
