@@ -91,10 +91,7 @@ export default function Gallery() {
                             />
                         </div>
                         <div className="p-6">
-                            <h3
-                                className="mb-2 text-xl font-semibold"
-                                style={{ color: '#C4A447' }}
-                            >
+                            <h3 className="mb-2 text-xl font-semibold" style={{ color: '#C4A447' }}>
                                 {item.title}
                             </h3>
                             <p className="text-sm leading-relaxed" style={{ color: '#E6D7C3' }}>
