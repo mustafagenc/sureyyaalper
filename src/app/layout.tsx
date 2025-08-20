@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/styles/globals.css";
 
@@ -13,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NODE_ENV === 'production' ? 'https://sureyyaalper.com' : 'http://localhost:3000'),
   title: "Süreyya Alper - Geleneksel Türk Sanatları Ustası | Müzehhibe",
   description: "Geleneksel müzehhiplik sanatını modern yorumlarla harmanlayan usta sanatçı Süreyya Alper'in eserlerini, biyografisini ve çalışmalarını keşfedin. Tezhip konularında uzman müzehhibe.",
   keywords: ["müzehhibe", "müzehhiplik", "tezhip", "geleneksel türk sanatları", "altın varak", "İslami sanat", "el yazması", "süsleme sanatı", "kadın sanatçı"],
@@ -87,6 +89,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
