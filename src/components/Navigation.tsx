@@ -33,9 +33,15 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white/90 backdrop-blur-sm'
-    } border-b border-amber-200`}>
+    <nav 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'backdrop-blur-md shadow-lg' : 'backdrop-blur-sm'
+      } border-b`}
+      style={{
+        backgroundColor: isScrolled ? 'rgba(66, 11, 32, 0.95)' : 'rgba(66, 11, 32, 0.90)',
+        borderBottomColor: '#D4AF37'
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -47,7 +53,7 @@ export default function Navigation() {
               height={40} 
               className="rounded-full" 
             />
-            <span className="ml-3 text-xl font-bold text-amber-900">Süreyya Alper</span>
+            <span className="ml-3 text-xl font-bold" style={{ color: '#F5DEB3' }}>Süreyya Alper</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -56,7 +62,8 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-amber-800 hover:text-amber-600 transition-colors font-medium"
+                className="transition-colors font-medium hover:opacity-80"
+                style={{ color: '#D4AF37' }}
               >
                 {item.label}
               </Link>
@@ -66,19 +73,28 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg hover:bg-amber-50 transition-colors"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-lg transition-colors hover:opacity-80"
             aria-label="Menüyü aç/kapat"
           >
             <div className="space-y-1.5">
-              <div className={`w-6 h-0.5 bg-amber-800 transition-all duration-300 ${
-                isMenuOpen ? 'rotate-45 translate-y-2' : ''
-              }`}></div>
-              <div className={`w-6 h-0.5 bg-amber-800 transition-all duration-300 ${
-                isMenuOpen ? 'opacity-0' : ''
-              }`}></div>
-              <div className={`w-6 h-0.5 bg-amber-800 transition-all duration-300 ${
-                isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-              }`}></div>
+              <div 
+                className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMenuOpen ? 'rotate-45 translate-y-2' : ''
+                }`}
+                style={{ backgroundColor: '#D4AF37' }}
+              ></div>
+              <div 
+                className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMenuOpen ? 'opacity-0' : ''
+                }`}
+                style={{ backgroundColor: '#D4AF37' }}
+              ></div>
+              <div 
+                className={`w-6 h-0.5 transition-all duration-300 ${
+                  isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+                }`}
+                style={{ backgroundColor: '#D4AF37' }}
+              ></div>
             </div>
           </button>
         </div>
@@ -93,7 +109,8 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 onClick={closeMenu}
-                className="block px-4 py-2 text-amber-800 hover:text-amber-600 hover:bg-amber-50 rounded-lg transition-colors"
+                className="block px-4 py-2 rounded-lg transition-colors hover:opacity-80"
+                style={{ color: '#D4AF37' }}
               >
                 {item.label}
               </Link>

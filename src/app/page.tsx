@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-red-50">
+    <main className="min-h-screen" style={{ background: 'linear-gradient(135deg, #420B20 0%, #600E2E 50%, #2D0B1F 100%)' }}>
       {/* Navigation */}
       <Navigation />
 
@@ -20,31 +20,40 @@ export default function Home() {
                 alt="Süreyya Alper"
                 width={200}
                 height={200}
-                className="mx-auto rounded-full shadow-2xl border-4 border-amber-200"
+                className="mx-auto rounded-full shadow-2xl border-4"
+                style={{ borderColor: '#D4AF37' }}
               />
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 text-transparent bg-clip-text">
+              <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(45deg, #D4AF37, #F5DEB3, #CD853F)' }}>
                 Süreyya Alper
               </span>
             </h1>
-            <p className="text-xl sm:text-2xl text-amber-800 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto" style={{ color: '#F5DEB3' }}>
               Geleneksel Türk Sanatları Ustası • Müzehhibe
             </p>
-            <p className="text-lg text-amber-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg mb-10 max-w-4xl mx-auto leading-relaxed" style={{ color: '#E6D7C3' }}>
               Asırlardır süregelen müzehhiplik sanatını modern dokuşlarla
               harmanlayarak, her eserde zarafet ve inceliği yaşatıyorum.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="#eserler"
-                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:opacity-90"
+                style={{ 
+                  background: 'linear-gradient(45deg, #600E2E, #8B1538)'
+                }}
               >
                 Eserlerimi İnceleyin
               </Link>
               <Link
                 href="#iletisim"
-                className="inline-flex items-center px-8 py-3 border-2 border-amber-600 text-base font-medium rounded-lg text-amber-600 bg-white hover:bg-amber-50 transition-all duration-300"
+                className="inline-flex items-center px-8 py-3 border-2 text-base font-medium rounded-lg transition-all duration-300 hover:opacity-80"
+                style={{ 
+                  borderColor: '#D4AF37',
+                  color: '#D4AF37',
+                  backgroundColor: 'rgba(66, 11, 32, 0.3)'
+                }}
               >
                 İletişime Geçin
               </Link>
@@ -54,23 +63,23 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="hakkinda" className="py-16 bg-white/70 backdrop-blur-sm">
+      <section id="hakkinda" className="py-16" style={{ backgroundColor: 'rgba(66, 11, 32, 0.8)', backdropFilter: 'blur(4px)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-amber-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#F5DEB3' }}>
               Hakkımda
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-24 h-1 mx-auto" style={{ background: 'linear-gradient(90deg, #D4AF37, #F5DEB3)' }}></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: '#E6D7C3' }}>
                 Müzehhiplik sanatına olan tutkum, geleneksel Türk sanatlarının
                 bu nadide dalını yaşatma arzumdan doğdu. Her fırça darbesi, her
                 altın varak parçası, asırlık bir geleneğin modern yorumudur.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg leading-relaxed" style={{ color: '#E6D7C3' }}>
                 Çalışmalarımda klasik motiflerden ilham alırken, çağdaş estetik
                 anlayışını da harmanlayarak benzersiz eserler ortaya
                 çıkarıyorum. Her proje, müzehhiplik sanatının incelikli
@@ -97,11 +106,11 @@ export default function Home() {
       <section id="eserler" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-amber-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#F5DEB3' }}>
               Eserlerim
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
-            <p className="mt-6 text-lg text-amber-700 max-w-3xl mx-auto">
+            <div className="w-24 h-1 mx-auto" style={{ background: 'linear-gradient(90deg, #D4AF37, #F5DEB3)' }}></div>
+            <p className="mt-6 text-lg max-w-3xl mx-auto" style={{ color: '#E6D7C3' }}>
               Geleneksel müzehhiplik sanatının güzelliklerini modern yorumlarla
               buluşturan eserlerim
             </p>
@@ -112,13 +121,13 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="iletisim" className="py-16 bg-white/70 backdrop-blur-sm">
+      <section id="iletisim" className="py-16" style={{ backgroundColor: 'rgba(66, 11, 32, 0.8)', backdropFilter: 'blur(4px)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-amber-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4" style={{ color: '#F5DEB3' }}>
               İletişim
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-amber-600 to-orange-600 mx-auto"></div>
+            <div className="w-24 h-1 mx-auto" style={{ background: 'linear-gradient(90deg, #D4AF37, #F5DEB3)' }}></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -227,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-amber-900 text-white py-12">
+      <footer className="py-12" style={{ backgroundColor: '#420B20' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
@@ -238,12 +247,12 @@ export default function Home() {
                 height={50}
                 className="rounded-full mr-3"
               />
-              <span className="text-2xl font-bold">Süreyya Alper</span>
+              <span className="text-2xl font-bold" style={{ color: '#F5DEB3' }}>Süreyya Alper</span>
             </div>
-            <p className="text-amber-200 mb-6">
+            <p className="mb-6" style={{ color: '#D4AF37' }}>
               Geleneksel Türk Sanatları • Müzehhiplik
             </p>
-            <p className="text-amber-300 text-sm">
+            <p className="text-sm" style={{ color: '#E6D7C3' }}>
               © 2024 Süreyya Alper. Tüm hakları saklıdır.
             </p>
           </div>

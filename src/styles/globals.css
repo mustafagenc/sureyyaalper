@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffbf5;
-  --foreground: #1f1611;
+  --background: #420B20;
+  --foreground: #F5DEB3;
 }
 
 @theme inline {
@@ -28,16 +28,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #600E2E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d97706;
+  background: #D4AF37;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b45309;
+  background: #F5DEB3;
 }
 
 /* Smooth transitions for all elements */
@@ -79,7 +79,7 @@ body {
 
 /* Custom focus states */
 input:focus, textarea:focus, button:focus {
-  outline: 2px solid #d97706;
+  outline: 2px solid #D4AF37;
   outline-offset: 2px;
 }
 
